@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>☆ Magical Mythical Monsters ☆</title>
+  </head>
+  <body>
+    <main>
+      <section class="player-sidebar">
+        <h3>HUMAN</h3>
+        <div>👱</div>
+        <p>WINS: </p>
+        <button class="game-hub-button hidden">Back to Game Hub</button>
+      </section>
+        <section class="view game-hub-view">
+          <header>
+            <h1>Magical Mythical Monsters</h1>
+            <p class="who-will-win">Which terrifying creature will win?</p>
+          </header>
+          <h2>Choose your game!</h2>
+            <div class="game-options">
+            <section class="game-choice easy-game" id="easyGame">
+              <label>🌲 Forest of Wonder 🌲</label>
+              <div class="difficulty-level">
+                <p>Easy Game</p>
+              </div>
+            </section>
+            <section class="game-choice normal-game" id="normalGame">
+              <label>🪨 Summit of Doom 🪨</label>
+              <div class="difficulty-level">
+                <p>Normal Game</p>
+              </div>
+            </section>
+            <section class="game-choice hard-game" id="hardGame">
+              <label>🌊 Ocean of Ruin 🌊</label>
+              <div class="difficulty-level">
+                <p>Difficult Game</p>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section class="view easy-game-view hidden">
+          <header>
+            <h1>🌲 Forest of Wonder 🌲</h1>
+          </header>
+          <h2>Choose your Monster!</h2>
+          <div class="game-rules">
+            <h3>Game Rules!</h3>
+              <p>unicorn > phoenix</p>
+              <p>phoenix > kitsune</p>
+              <p>kitsune > unicorn</p>
+          </div>
+        </section>
+        <section class="view normal-game-view hidden">
+          <header>
+            <h1>🪨 Summit of Doom 🪨</h1>
+          </header>
+          <h2>Choose your Monster!</h2>
+          <div class="game-rules">
+            <h3>Game Rules!</h3>
+              <p>unicorn > minotaur & dragon&emsp;&emsp;&emsp;&emsp;&emsp;minotaur > kitsune & phoenix</p>
+              <p>kitsune > unicorn & griffin&emsp;&emsp;&emsp;&emsp;&emsp;phoenix > unicorn & dragon</p>
+              <p>dragon > kitsune & griffin&emsp;&emsp;&emsp;&emsp;&emsp;griffin > minotaur & phoenix</p>
+          </div>
+        </section>
+        <section class="view hard-game-view hidden">
+          <header>
+            <h1>🌊 Ocean of Ruin 🌊</h1>
+          </header>
+            <h2>Choose your Monster!</h2>
+            <div class="game-rules">
+              <h3>Game Rules!</h3>
+                <p>unicorn > minotaur & dragon & hydra&emsp;&emsp;&emsp;&emsp;&emsp;minotaur > kitsune & phoenix & leviathan&emsp;&emsp;&emsp;&emsp;&emsp;kitsune > unicorn & griffin & kraken</p>
+                <p>phoenix > unicorn & dragon & kraken&emsp;&emsp;&emsp;&emsp;&emsp;dragon > kitsune & griffin & leviathan&emsp;&emsp;&emsp;&emsp;&emsp;griffin > minotaur & phoenix & hydra</p>
+                <p>hydra > minotaur & dragon & leviathan&emsp;&emsp;&emsp;&emsp;&emsp;leviathan > unicorn & griffin & kraken&emsp;&emsp;&emsp;&emsp;&emsp;kraken > kitsune & phoenix & hydra</p>
+            </div>
+        </section>
+      <section class="robot-sidebar">
+        <h3>ROBOT</h3>
+        <div>🤖</div>
+        <p>WINS: </p>
+        <!-- <button class="restart-game-button hidden">Restart Game</button> -->
+      </section>
+    </main>
+    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
