@@ -1,17 +1,8 @@
 class Player {
-  constructor(player, token) {
-    this.name = player; //human or robot
-    this.token = token; //avatar image
-    this.wins = 0; //win counter
+  constructor(token) {
+    this.token = token;
+    this.wins = 0;
     this.currentMonster = '';
-  }
-
-  takeTurn(monsterChoice, monsterOptions) {
-    if (this.name === 'HUMAN') {
-      humanTurn(monsterChoice);
-    } else {
-      robotTurn(monsterOptions);
-    }
   }
 
   humanTurn(monsterChoice){
@@ -23,10 +14,6 @@ class Player {
   }
 
   increaseWins() {
-    this.wins +=1;
+    this.wins++;
   }
 };
-
-// Player methods must include, but are not limited to:
-// constructor - properties should include: name (ex: 'Human'), token (ex: '👩🏻'), wins (ex: 0)
-// takeTurn
