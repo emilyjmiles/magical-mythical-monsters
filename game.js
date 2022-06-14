@@ -1,9 +1,9 @@
 class Game {
-  constructor(human, robot, gameType) {
-    this.human = new Player(human);
-    this.robot = new Player(robot);
-    this.type = gameType;
-    this.monsters = [];
+  constructor(gameChoice) {
+    this.human = new Player('HUMAN', 'assets/winner-human-brain.png');
+    this.robot = new Player('ROBOT', 'assets/winner-robot.png');
+    this.currentWinner = '';
+    this.gameStatus = '';
     this.winConditions = {
       unicorn: ['minotaur', 'dragon', 'hydra'],
       minotaur: ['kitsune', 'phoenix', 'leviathan'],
@@ -17,13 +17,28 @@ class Game {
     }
   }
 
-  gameMonsterOptions(){
-    if (this.type === 'easy') {
-      this.monsters = ['unicorn', 'minotaur', 'kitsune'];
-    } if (this.type === 'medium') {
-      this.monsters = ['unicorn', 'minotaur', 'kitsune', 'phoenix', 'dragon', 'griffin'];
-    } if (this.type === 'hard')
-    this.fighters = ['unicorn', 'minotaur', 'kitsune', 'phoenix', 'dragon', 'griffin', 'hydra', 'leviathan', 'kraken'];
+  checkForWinner(humanChoice, robotChoice) {
+    console.log('human', humanChoice, robotChoice, 'robot');
+    var condition = this.winConditions[humanChoice];
+    if (humanChoice === robotChoice) {
+      this.currentWinner = '';
+      this.gameStatus = `Your monsters are equally matched. Neither may have won, but the battle has just begun!`;
+      return;
+    }
+    if (condition.includes(robotChoice)) {
+      this.currentWinner = this.human.token;
+      this.gameStatus = `You have triumphed over your opponent! Welcome to the winner's circle.`;
+      this.human.increaseWins();
+    } else {
+      this.currentWinner = this.robot.token;
+      this.gameStatus = `Your monster has been defeated. Don't depair, there are still many battles to be fought!`;
+      this.robot.increaseWins();
+    }
+  }
+
+  resetMonsterChoice() {
+    this.human.currentMonster = '';
+    this.robot.currentMonster = '';
   }
 };
 

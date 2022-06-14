@@ -6,20 +6,27 @@ class Player {
     this.currentMonster = '';
   }
 
-  takeTurn(monsterOptions) {
+  takeTurn(monsterChoice, monsterOptions) {
     if (this.name === 'HUMAN') {
-      this.currentMonster = monsterOptions;
+      humanTurn(monsterChoice);
+    } else {
+      robotTurn(monsterOptions);
     }
-    this.currentMonster = monsterOptions[Math.floor(Math.random() * monsterOptions.length)];
   }
 
-  winIncrementor() {
+  humanTurn(monsterChoice){
+    this.currentMonster = monsterChoice;
+  }
+
+  robotTurn(monsterOptions) {
+    this.currentMonster = monsterOptions[Math.floor(Math.random() * monsterOptions.length)].id;
+  }
+
+  increaseWins() {
     this.wins +=1;
   }
 };
 
 // Player methods must include, but are not limited to:
 // constructor - properties should include: name (ex: 'Human'), token (ex: '👩🏻'), wins (ex: 0)
-// saveWinsToStorage - only necessary if you choose the localStorage extension
-// retrieveWinsFromStorage - only necessary if you choose the localStorage extension
 // takeTurn
