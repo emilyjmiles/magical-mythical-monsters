@@ -1,19 +1,22 @@
-#Magical Mythical Monsters Overview
+# Magical Mythical Monsters Overview
+
 This variation of the classic Rock, Paper, Scissors game, allows the user to pick from three different difficulty levels to play against a 'Robot', or in this case the computer. The user can choose from three mythical monsters on the 'easy game' level, six mythical monsters on the 'normal game' level, and nine mythical monsters on the 'difficult game' level. This web game was built utilizing HTML, CSS, and JavaScript.
 
-[Click here to play Magical Mythical Monsters.](https://emilyjmiles.github.io/magical-mythical-monsters/)
+[Click her to review specifications for the Rock, Paper, Scissor's project.](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)
 
 ## Gameplay Demonstration
 
 **How to play Magical Mythical Monsters:**
 
-  - Choose the game option you want to play: 'Forest of Wonder - Easy Game', 'Summit of Doom - Normal Game', or 'Ocean of Ruin - Difficult Game'
+  - Choose the game option you want to play: 'Forest of Wonder: Easy Game', 'Summit of Doom: Normal Game', or 'Ocean of Ruin: Difficult Game'
   - Choose your mythical monster and play against the 'Robot' computer player!
   - A screen with your choice, the Robot's choice, and the winner announcement will briefly appear.
   - The winner's score will be updated during each round.
   - Click the 'Change Game Choice' button to choose a different game option.
   - The score for each player will remain the same, even if you change the game option you are playing.
   - You can clear the number of wins by clicking the 'Reset Game Score' button, if you would like to start over.
+
+![Magical Mythical Monsters Gameplay](https://user-images.githubusercontent.com/103063934/173708402-f5fd3bee-f701-4afc-95ea-ed2bf58d9fdf.mov)
 
 ## Programming Languages and Dependencies
 
