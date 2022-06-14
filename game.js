@@ -1,9 +1,10 @@
 class Game {
-  constructor(human, robot, gameType) {
-    this.human = new Player(human);
-    this.robot = new Player(robot);
-    this.type = gameType;
-    this.monsters = [];
+  constructor(gameChoice) {
+    this.human = new Player('assets/winner-human-brain.png');
+    this.robot = new Player('assets/winner-robot.png');
+    this.gameChoice = gameChoice;
+    this.currentWinner = '';
+    this.gameStatus = '';
     this.winConditions = {
       unicorn: ['minotaur', 'dragon', 'hydra'],
       minotaur: ['kitsune', 'phoenix', 'leviathan'],
@@ -17,20 +18,19 @@ class Game {
     }
   }
 
-  gameMonsterOptions(){
-    if (this.type === 'easy') {
-      this.monsters = ['unicorn', 'minotaur', 'kitsune'];
-    } if (this.type === 'medium') {
-      this.monsters = ['unicorn', 'minotaur', 'kitsune', 'phoenix', 'dragon', 'griffin'];
-    } if (this.type === 'hard')
-    this.fighters = ['unicorn', 'minotaur', 'kitsune', 'phoenix', 'dragon', 'griffin', 'hydra', 'leviathan', 'kraken'];
+  checkForWinner(humanChoice, robotChoice) {
+    var condition = this.winConditions[humanChoice];
+    if (humanChoice === robotChoice) {
+      this.currentWinner = '';
+      this.gameStatus = `Your monsters are equally matched. Neither may have won, but the battle has just begun!`;
+    } else if (condition.includes(robotChoice)) {
+      this.currentWinner = this.human.token;
+      this.human.increaseWins();
+      this.gameStatus = `You have triumphed over your opponent! Welcome to the winner's circle.`;
+    } else {
+      this.currentWinner = this.robot.token;
+      this.robot.increaseWins();
+      this.gameStatus = `Your monster has been defeated. Don't despair, there are still many battles to be fought!`;
+    }
   }
 };
-
-// A Game should include:
-// Two Player instances
-// A way to keep track of the data for the game board
-// A way to keep track of the selected game type
-// A way to check the Game’s board data for win conditions
-// A way to detect when a game is a draw (no one has won)
-// A way to reset the Game’s board to begin a new game
