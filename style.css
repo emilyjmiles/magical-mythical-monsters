@@ -2,6 +2,7 @@
   font-family: 'Papyrus', sans-serif;
   text-align: center;
 }
+
 html {
   background: linear-gradient(#76D7C4, #7FB3D5, #C39BD3);
   background-size: cover;
@@ -11,11 +12,24 @@ html {
 
 main {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button {
+  font-size: 1em;
+  padding: 2.5%;
+  margin-top: 20vh;
+}
+
+button:hover {
+  transform: scale(1.25);
+  filter: drop-shadow(0 0 0.75rem black);
+  cursor: pointer;
 }
 
 h1 {
-  font-size: 4.5em;
+  font-size: 3.25em;
 }
 
 h2 {
@@ -32,6 +46,11 @@ header {
   line-height: 75%;
 }
 
+a {
+  font-size: 1.5em;
+  text-align: top;
+}
+
 .player-sidebar {
   background-color: white;
   height: 100vh;
@@ -41,6 +60,9 @@ header {
 .view {
   height: 100vh;
   width: 70vw;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .who-will-win {
@@ -59,8 +81,8 @@ header {
   background-image: url('assets/paper-button-backdrop.png');
   background-size: cover;
   background-repeat: no-repeat;
-  filter: drop-shadow(0 0 0.75rem WhiteSmoke);
   padding: 2.5%;
+  filter: drop-shadow(0 0 0.75rem WhiteSmoke);
 }
 
 .game-choice:hover {
@@ -80,6 +102,47 @@ header {
 }
 
 .hidden {
-  visibility: hidden;
   display: none;
+}
+
+.game-rules {
+  font-size: 1.1em;
+  background-image: url('assets/paper-button-backdrop.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 0 0.75rem WhiteSmoke);
+  padding: 2.5%;
+}
+
+.easy {
+  width: 40vw;
+}
+
+.normal {
+  width: 52.5vw;
+}
+
+.hard {
+  width: 60vw;
+}
+
+.mini-monsters {
+  display:flex;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.easy-monster-icon:hover{
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.normal-monster-icon:hover{
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.hard-monster-icon:hover{
+  transform: scale(1.25);
+  cursor: pointer;
 }
