@@ -16,7 +16,7 @@ This variation of the classic Rock, Paper, Scissors game, allows the user to pic
   - The score for each player will remain the same, even if you change the game option you are playing.
   - You can clear the number of wins by clicking the 'Reset Game Score' button, if you would like to start over.
 
-![Magical Mythical Monsters Gameplay](https://user-images.githubusercontent.com/103063934/173708402-f5fd3bee-f701-4afc-95ea-ed2bf58d9fdf.mov)
+[![Magical Mythical Monsters Gameplay](https://user-images.githubusercontent.com/103063934/173708402-f5fd3bee-f701-4afc-95ea-ed2bf58d9fdf.mov)]
 
 ## Programming Languages and Dependencies
 
