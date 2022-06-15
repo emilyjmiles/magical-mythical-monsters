@@ -91,7 +91,6 @@ function playGame(humanChoice, monsterOptions) {
   displayGameResults(game.human.currentMonster, game.robot.currentMonster, game.gameStatus);
   updateWinCount();
   backToGame();
-  console.log('henlo');
 }
 
 function displayGameResults(humanChoice, robotChoice, gameStatus) {
