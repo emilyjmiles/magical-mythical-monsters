@@ -54,6 +54,10 @@ function showMainGameHub() {
 function showEasyGame() {
   game.gameChoice = easyGameView;
   addEventToMonsters(easyMonsterIcons);
+  resetEasyGame();
+}
+
+function resetEasyGame() {
   showElements([easyGameView, changeGameButton, restartGameButton]);
   hideElements([gameHubView, normalGameView, hardGameView, winnerPageView]);
 }
@@ -61,6 +65,10 @@ function showEasyGame() {
 function showNormalGame() {
   game.gameChoice = normalGameView;
   addEventToMonsters(normalMonsterIcons);
+  resetNormalGame();
+}
+
+function resetNormalGame() {
   showElements([normalGameView, changeGameButton, restartGameButton]);
   hideElements([gameHubView, easyGameView, hardGameView, winnerPageView]);
 }
@@ -68,6 +76,10 @@ function showNormalGame() {
 function showHardGame() {
   game.gameChoice = hardGameView;
   addEventToMonsters(hardMonsterIcons);
+  resetHardGame()
+}
+
+function resetHardGame() {
   showElements([hardGameView, changeGameButton, restartGameButton]);
   hideElements([gameHubView, easyGameView, normalGameView, winnerPageView]);
 }
@@ -79,6 +91,7 @@ function playGame(humanChoice, monsterOptions) {
   displayGameResults(game.human.currentMonster, game.robot.currentMonster, game.gameStatus);
   updateWinCount();
   backToGame();
+  console.log('henlo');
 }
 
 function displayGameResults(humanChoice, robotChoice, gameStatus) {
@@ -98,11 +111,11 @@ function updateWinCount() {
 
 function backToGame() {
   if (game.gameChoice === easyGameView) {
-    setTimeout(showEasyGame, 1500);
+    setTimeout(resetEasyGame, 1500);
   } else if (game.gameChoice === normalGameView) {
-    setTimeout(showNormalGame, 1500);
+    setTimeout(resetNormalGame, 1500);
   } else if (game.gameChoice === hardGameView) {
-    setTimeout(showHardGame, 1500);
+    setTimeout(resetHardGame, 1500);
   }
 }
 
