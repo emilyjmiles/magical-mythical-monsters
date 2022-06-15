@@ -1,13 +1,14 @@
 * {
   font-family: 'Papyrus', sans-serif;
   text-align: center;
+  /* border: 2px solid red; */
 }
 
 html {
   background: linear-gradient(#76D7C4, #7FB3D5, #C39BD3);
   background-size: cover;
+  background-position: fixed;
   background-repeat: no-repeat;
-  opacity: inherit;
 }
 
 main {
@@ -29,12 +30,15 @@ button:hover {
 }
 
 h1 {
+  width: 60vw;
   font-size: 3.25em;
+  /* margin:2.5% */
 }
 
 h2 {
+  width: 60vw;
+  margin: 2.5%;
   font-size: 2em;
-  margin-bottom: 10%;
 }
 
 h3 {
@@ -42,7 +46,7 @@ h3 {
 }
 
 header {
-  padding: 2.5%;
+  /* padding: 2.5%; */
   line-height: 75%;
 }
 
@@ -53,6 +57,7 @@ a {
 
 .player-sidebar {
   background-color: white;
+
   height: 100vh;
   width: 15vw;
 }
@@ -72,23 +77,35 @@ a {
 
 .game-options {
   display:flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
+  width: 60vw;
+  margin: 5%
 }
 
 .game-choice {
-  font-size: 1.25em;
   background-image: url('assets/paper-button-backdrop.png');
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 2.5%;
+  width: 15vw;
+  height: 15vh;
+  margin: 1.5%;
+  padding: 1.5%;
   filter: drop-shadow(0 0 0.75rem WhiteSmoke);
+  font-size: 1.25em;
 }
 
 .game-choice:hover {
    transform: scale(1.25);
    filter: drop-shadow(0 0 0.75rem white);
    cursor: pointer;
+}
+
+.game-button{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10%;
 }
 
 .difficulty-level {
@@ -111,7 +128,8 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   filter: drop-shadow(0 0 0.75rem WhiteSmoke);
-  padding: 2.5%;
+  /* padding: 2.5%; */
+  margin: 2.5%
 }
 
 .easy {
@@ -130,6 +148,7 @@ a {
   display:flex;
   justify-content:space-evenly;
   align-items: center;
+  width: 50vw
 }
 
 .easy-monster-icon:hover{
