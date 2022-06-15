@@ -16,7 +16,11 @@ This variation of the classic Rock, Paper, Scissors game, allows the user to pic
   - The score for each player will remain the same, even if you change the game option you are playing.
   - You can clear the number of wins by clicking the 'Reset Game Score' button, if you would like to start over.
 
-https://user-images.githubusercontent.com/103063934/173709066-b6207699-f2a9-420e-9739-c89c5f6463fd.mov
+
+
+https://user-images.githubusercontent.com/103063934/173710444-84d7ce3e-30ad-4905-9058-81908a355268.mov
+
+
 
 ## Programming Languages and Dependencies
 
