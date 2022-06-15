@@ -4,6 +4,8 @@ This variation of the classic Rock, Paper, Scissors game, allows the user to pic
 
 [Click here to review specifications for the Rock, Paper, Scissor's project.](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)
 
+[Click her to play Magical Mythical Monsters!](https://emilyjmiles.github.io/magical-mythical-monsters/)
+
 ## Gameplay Demonstration
 
 **How to play Magical Mythical Monsters:**
@@ -16,9 +18,24 @@ This variation of the classic Rock, Paper, Scissors game, allows the user to pic
   - The score for each player will remain the same, even if you change the game option you are playing.
   - You can clear the number of wins by clicking the 'Reset Game Score' button, if you would like to start over.
 
+### 🌲 Forest of Wonder 🌲 Easy Game:
 
 
-https://user-images.githubusercontent.com/103063934/173710444-84d7ce3e-30ad-4905-9058-81908a355268.mov
+https://user-images.githubusercontent.com/103063934/173960176-fb5606e4-114d-4a2d-928b-9da441b40ed3.mov
+
+
+### 🪨 Summit of Doom 🪨 Normal Game:
+
+
+https://user-images.githubusercontent.com/103063934/173960193-d4576ab5-7041-4520-9262-374402af2ac6.mov
+
+
+
+### 🌊 Ocean of Ruin 🌊 Difficult Game:
+
+
+https://user-images.githubusercontent.com/103063934/173960214-b33acd8e-1edb-49aa-b6c6-342f0760b43c.mov
+
 
 
 
