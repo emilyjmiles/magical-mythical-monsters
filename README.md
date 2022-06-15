@@ -2,7 +2,7 @@
 
 This variation of the classic Rock, Paper, Scissors game, allows the user to pick from three different difficulty levels to play against a 'Robot', or in this case the computer. The user can choose from three mythical monsters on the 'easy game' level, six mythical monsters on the 'normal game' level, and nine mythical monsters on the 'difficult game' level. This web game was built utilizing HTML, CSS, and JavaScript.
 
-[Click her to review specifications for the Rock, Paper, Scissor's project.](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)
+[Click here to review specifications for the Rock, Paper, Scissor's project.](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo-v2.html)
 
 ## Gameplay Demonstration
 
@@ -46,7 +46,7 @@ Game methods include:
 
 ## Challenges & Wins
 
-Building this game from scratch without the usual project iteration prompts, required careful planning and problem solving. I utilized pseudo coding and asked my fellow cohort mates to be my rubber duck for my JavaScript logic. I struggled with some of the Game class functionality, but ultimately had the correct logic that needed to be implemented. Maintaining and refactoring DRY code went well, with the exception of my HTML file where I could have had a more clear concise way of organizing my code to avoid repetitive code blocks. My biggest challenge was working through a gameplay bug that miss counted the user and robot wins. Unfortunately, I was unable to resolve the bug in time, but look forward to solving that issue in the future. Overall, this project really brought me out of my comfort zone as a new developer, but I am happy with the end product.
+Building this game from scratch without the usual project iteration prompts, required careful planning and problem solving. I utilized pseudo coding and asked my fellow cohort mates to be my rubber duck for my JavaScript logic. I struggled with some of the Game class functionality, but ultimately had the correct logic that needed to be implemented. Maintaining and refactoring DRY code went well, with the exception of my HTML file where I could have had a more clear, concise way of organizing my code to avoid repetitive code blocks. My biggest challenge was working through a gameplay bug that miss counted the user and robot wins. Unfortunately, I was unable to resolve the bug in time, but look forward to solving that issue in the future. Overall, this project really brought me out of my comfort zone as a new developer, but I am happy with the end product.
 
 ## Contributions
 
@@ -55,5 +55,3 @@ _This app was developed by:_
 - [Emily Miles](https://github.com/emilyjmiles)
 
 _Emily is a student of front-end engineering at the Turing School of Software & Design._
-
-Project spec and assets provided by the [Turing School of Software & Design](https://turing.edu/).
