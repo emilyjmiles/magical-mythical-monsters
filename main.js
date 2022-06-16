@@ -1,17 +1,17 @@
 
 var gameHubView = document.querySelector('.game-hub-view');
 var easyGameView = document.querySelector('.easy-game-view');
-var normalGameView = document.querySelector('.normal-game-view');
+var mediumGameView = document.querySelector('.medium-game-view');
 var hardGameView = document.querySelector('.hard-game-view');
 var winnerPageView = document.querySelector('.winner-page-view');
 
 var easyGame = document.querySelector('.easy-game');
-var normalGame = document.querySelector('.normal-game');
+var mediumGame = document.querySelector('.medium-game');
 var hardGame = document.querySelector('.hard-game');
 var changeGameButton = document.querySelector('.change-game-button');
 var restartGameButton = document.querySelector('.restart-game-button');
 var easyMonsterIcons = document.querySelectorAll('.easy-monster-icon');
-var normalMonsterIcons = document.querySelectorAll('.normal-monster-icon');
+var mediumMonsterIcons = document.querySelectorAll('.medium-monster-icon');
 var hardMonsterIcons = document.querySelectorAll('.hard-monster-icon');
 
 var announceWinner = document.querySelector('.announce-winner');
@@ -20,9 +20,9 @@ var robotWins = document.querySelector('.robot-wins');
 
 var game = new Game();
 
-easyGame.addEventListener('click', showEasyGame);
-normalGame.addEventListener('click', showNormalGame);
-hardGame.addEventListener('click', showHardGame);
+easyGame.addEventListener('click', playEasyGame);
+mediumGame.addEventListener('click', playMediumGame);
+hardGame.addEventListener('click', playHardGame);
 changeGameButton.addEventListener('click', showMainGameHub);
 restartGameButton.addEventListener('click', clearWinCount);
 
@@ -48,40 +48,40 @@ function addEventToMonsters(monsterOptions) {
 
 function showMainGameHub() {
   showElements([gameHubView]);
-  hideElements([easyGameView, normalGameView, hardGameView, winnerPageView, changeGameButton, restartGameButton]);
+  hideElements([easyGameView, mediumGameView, hardGameView, winnerPageView, changeGameButton, restartGameButton]);
 }
 
 function showEasyGame() {
+  showElements([easyGameView, changeGameButton, restartGameButton]);
+  hideElements([gameHubView, mediumGameView, hardGameView, winnerPageView]);
+}
+
+function playEasyGame() {
   game.gameChoice = easyGameView;
   addEventToMonsters(easyMonsterIcons);
-  resetEasyGame();
+  showEasyGame();
 }
 
-function resetEasyGame() {
-  showElements([easyGameView, changeGameButton, restartGameButton]);
-  hideElements([gameHubView, normalGameView, hardGameView, winnerPageView]);
-}
-
-function showNormalGame() {
-  game.gameChoice = normalGameView;
-  addEventToMonsters(normalMonsterIcons);
-  resetNormalGame();
-}
-
-function resetNormalGame() {
-  showElements([normalGameView, changeGameButton, restartGameButton]);
+function showMediumGame() {
+  showElements([mediumGameView, changeGameButton, restartGameButton]);
   hideElements([gameHubView, easyGameView, hardGameView, winnerPageView]);
 }
 
-function showHardGame() {
-  game.gameChoice = hardGameView;
-  addEventToMonsters(hardMonsterIcons);
-  resetHardGame()
+function playMediumGame() {
+  game.gameChoice = mediumGameView;
+  addEventToMonsters(mediumMonsterIcons);
+  showMediumGame();
 }
 
-function resetHardGame() {
+function showHardGame() {
   showElements([hardGameView, changeGameButton, restartGameButton]);
-  hideElements([gameHubView, easyGameView, normalGameView, winnerPageView]);
+  hideElements([gameHubView, easyGameView, mediumGameView, winnerPageView]);
+}
+
+function playHardGame() {
+  game.gameChoice = hardGameView;
+  addEventToMonsters(hardMonsterIcons);
+  showHardGame()
 }
 
 function playGame(humanChoice, monsterOptions) {
@@ -95,7 +95,7 @@ function playGame(humanChoice, monsterOptions) {
 
 function displayGameResults(humanChoice, robotChoice, gameStatus) {
   showElements([winnerPageView, changeGameButton]);
-  hideElements([gameHubView, easyGameView, normalGameView, hardGameView, changeGameButton, restartGameButton]);
+  hideElements([gameHubView, easyGameView, mediumGameView, hardGameView, changeGameButton, restartGameButton]);
   announceWinner.innerHTML = '';
   announceWinner.innerHTML +=
   `<img src="${game.currentWinner}"/>
@@ -110,11 +110,11 @@ function updateWinCount() {
 
 function backToGame() {
   if (game.gameChoice === easyGameView) {
-    setTimeout(resetEasyGame, 1500);
-  } else if (game.gameChoice === normalGameView) {
-    setTimeout(resetNormalGame, 1500);
+    setTimeout(showEasyGame, 1500);
+  } else if (game.gameChoice === mediumGameView) {
+    setTimeout(showMediumGame, 1500);
   } else if (game.gameChoice === hardGameView) {
-    setTimeout(resetHardGame, 1500);
+    setTimeout(showHardGame, 1500);
   }
 }
 
