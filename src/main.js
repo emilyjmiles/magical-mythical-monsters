@@ -40,9 +40,9 @@ function showElements(elements) {
 
 function addEventToMonsters(monsterOptions) {
   for (let i = 0; i < monsterOptions.length; i++) {
-    monsterOptions[i].addEventListener('click', function(event){
+    monsterOptions[i].addEventListener('click', function (event) {
       playGame(event.target.id, monsterOptions);
-    })
+    });
   }
 }
 
@@ -81,11 +81,11 @@ function showHardGame() {
 function playHardGame() {
   game.gameChoice = hardGameView;
   addEventToMonsters(hardMonsterIcons);
-  showHardGame()
+  showHardGame();
 }
 
 function playGame(humanChoice, monsterOptions) {
-  game.human.humanTurn(event.target.id);
+  game.human.humanTurn(humanChoice);
   game.robot.robotTurn(monsterOptions);
   game.checkForWinner(game.human.currentMonster, game.robot.currentMonster);
   displayGameResults(game.human.currentMonster, game.robot.currentMonster, game.gameStatus);
@@ -98,9 +98,9 @@ function displayGameResults(humanChoice, robotChoice, gameStatus) {
   hideElements([gameHubView, easyGameView, mediumGameView, hardGameView, changeGameButton, restartGameButton]);
   announceWinner.innerHTML = '';
   announceWinner.innerHTML +=
-  `<img src="${game.currentWinner}"/>
+    `<img src="${game.currentWinner}"/>
   <h2>${gameStatus}</h2>
-  <img src="assets/${humanChoice}-icon.png"/><a> VS </> <img src="assets/${robotChoice}-icon.png"/>`
+  <img src="assets/${humanChoice}-icon.png"/><a> VS </> <img src="assets/${robotChoice}-icon.png"/>`;
 }
 
 function updateWinCount() {
