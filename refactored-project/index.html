@@ -4,44 +4,50 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/rune-slasher');
+    </style>
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/ghost-theory');
+    </style>
     <title>☆ Magical Mythical Monsters ☆</title>
   </head>
   <body>
     <main>
       <section class="player-sidebar">
         <h3>HUMAN</h3>
-        <img src="assets/human-brain-icon.png" alt="human brain icon"/>
+        <img src="assets/human-brain-icon.png"/>
         <p class="human-wins">WINS: 0</p>
         <button class="change-game-button hidden">Change Game Choice</button>
       </section>
-        <section class="view game-hub-view">
+      <section class="view game-hub-view">
           <header>
-            <h1>Magical Mythical Monsters</h1>
-            <p class="who-will-win">Which terrifying creature will win?</p>
+            <h1 class="game-title">Magical Mythical Monsters</h1>
           </header>
-          <h2>Choose Your Adventure!</h2>
+          <h2 class="who-will-win">Which terrifying creature will win?</h2>
+          <p>Choose Your Adventure!</p>
           <box class="game-options">
-            <section class="game-choice easy-game">
+            <section class="game-choice forest-easy">
               <div class="game-button">
-                <label>🌲 Forest of Wonder 🌲</label>
+                <label>Forest of Wonder</label>
                 <div class="difficulty-level">
-                  <p>Easy Game</p>
+                  <p>Easy</p>
                 </div>
               </div>
             </section>
-            <section class="game-choice medium-game">
+            <section class="game-choice summit-medium">
               <div class="game-button">
-                <label>🪨 Summit of Doom 🪨</label>
+                <label>Summit of Doom</label>
                 <div class="difficulty-level">
-                  <p>Medium Game</p>
+                  <p>Medium</p>
                 </div>
               </div>
             </section>
-            <section class="game-choice hard-game">
+            <section class="game-choice ocean-hard">
               <div class="game-button">
-                <label>🌊 Ocean of Ruin 🌊</label>
+                <label>Ocean of Ruin</label>
                 <div class="difficulty-level">
-                  <p>Hard Game</p>
+                  <p>Hard</p>
                 </div>
               </div>
             </section>
@@ -49,12 +55,16 @@
         </section>
         <section class="view easy-game-view hidden">
           <header>
-            <h1>🌲 Forest of Wonder 🌲</h1>
+            <h1>Forest of Wonder</h1>
           </header>
           <h2>Choose Your Monster!</h2>
             <section class="game-rules easy">
               <h3>Game Rules!</h3>
-                <p>unicorn > minotaur&emsp;&emsp;&emsp;&emsp;&emsp;minotaur > kitsune&emsp;&emsp;&emsp;&emsp;&emsp;kitsune > unicorn</p>
+              <div class="rules">
+                <p>unicorn > minotaur</p>
+                <p>minotaur > kitsune</p>
+                <p>kitsune > unicorn</p>
+              </div>
             </section>
           <box class="mini-monsters">
             <img class="easy-monster-icon" id="unicorn" src="assets/unicorn-icon.png" alt="unicorn"/>
@@ -64,14 +74,19 @@
         </section>
         <section class="view medium-game-view hidden">
           <header>
-            <h1>🪨 Summit of Doom 🪨</h1>
+            <h1>Summit of Doom</h1>
           </header>
           <h2>Choose Your Monster!</h2>
             <section class="game-rules medium">
               <h3>Game Rules!</h3>
-                <p>unicorn > minotaur & dragon&emsp;&emsp;&emsp;&emsp;&emsp;minotaur > kitsune & phoenix</p>
-                <p>kitsune > unicorn & griffin&emsp;&emsp;&emsp;&emsp;&emsp;phoenix > unicorn & dragon</p>
-                <p>dragon > kitsune & griffin&emsp;&emsp;&emsp;&emsp;&emsp;griffin > minotaur & phoenix</p>
+              <div class="rules">
+                <p>unicorn > minotaur & dragon</p>
+                <p>minotaur > kitsune & phoenix</p>
+                <p>kitsune > unicorn & griffin</p>
+                <p>phoenix > unicorn & dragon</p>
+                <p>dragon > kitsune & griffin</p>
+                <p>griffin > minotaur & phoenix</p>
+              </div>
             </section>
           <box class="mini-monsters">
             <img class="medium-monster-icon" id="unicorn" src="assets/unicorn-icon.png" alt="unicorn"/>
@@ -84,14 +99,22 @@
         </section>
         <section class="view hard-game-view hidden">
           <header>
-            <h1>🌊 Ocean of Ruin 🌊</h1>
+            <h1>Ocean of Ruin</h1>
           </header>
           <h2>Choose Your Monster!</h2>
             <section class="game-rules hard">
               <h3>Game Rules!</h3>
-                <p>unicorn > minotaur & dragon & hydra&emsp;&emsp;&emsp;&emsp;&emsp;minotaur > kitsune & phoenix & leviathan&emsp;&emsp;&emsp;&emsp;&emsp;kitsune > unicorn & griffin & kraken</p>
-                <p>phoenix > unicorn & dragon & kraken&emsp;&emsp;&emsp;&emsp;&emsp;dragon > kitsune & griffin & leviathan&emsp;&emsp;&emsp;&emsp;&emsp;griffin > minotaur & phoenix & hydra</p>
-                <p>hydra > minotaur & dragon & leviathan&emsp;&emsp;&emsp;&emsp;&emsp;leviathan > unicorn & griffin & kraken&emsp;&emsp;&emsp;&emsp;&emsp;kraken > kitsune & phoenix & hydra</p>
+              <div class="rules">
+                <p>unicorn > minotaur & dragon & hydra</p>
+                <p>minotaur > kitsune & phoenix & leviathan</p>
+                <p>kitsune > unicorn & griffin & kraken</p>
+                <p>phoenix > unicorn & dragon & kraken</p>
+                <p>dragon > kitsune & griffin & leviathan</p>
+                <p>griffin > minotaur & phoenix & hydra</p>
+                <p>hydra > minotaur & dragon & leviathan</p>
+                <p>leviathan > unicorn & griffin & kraken</p>
+                <p>kraken > kitsune & phoenix & hydra</p>
+              </div>
             </section>
           <box class="mini-monsters">
             <img class="hard-monster-icon" id="unicorn" src="assets/unicorn-icon.png" alt="unicorn"/>
@@ -115,7 +138,7 @@
         </section>
       <section class="robot-sidebar">
         <h3>ROBOT</h3>
-        <img src="assets/robot-icon.png" alt="robot icon"/>
+        <img src="assets/robot-icon.png"/>
         <p class="robot-wins">WINS: 0</p>
         <button class="restart-game-button hidden">Reset Game Score</button>
       </section>
